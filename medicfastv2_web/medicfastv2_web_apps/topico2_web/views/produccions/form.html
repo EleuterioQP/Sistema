@@ -1,0 +1,129 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="ProduccionSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/1211810014.png" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Registro</span>
+                            <span class="md-subhead">Registro Produccion</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                             <div layout-gt-sm="column" flex="60">
+
+                                <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="nombre_certificadora de produccion" name= "nombre_certificadora" ng-model="produccion.nombre_certificadora" required>
+                                <div ng-messages="dForm.nombre_certificadora.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="area_cosechada de produccion" name= "area_cosechada" ng-model="produccion.area_cosechada" required>
+                                <div ng-messages="dForm.area_cosechada.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+
+
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="area_perdida de produccion" name= "area_perdida" ng-model="produccion.area_perdida" required>
+                                <div ng-messages="dForm.area_perdida.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="area_sembrada de produccion" name= "area_sembrada" ng-model="produccion.area_sembrada" required>
+                                <div ng-messages="dForm.area_sembrada.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+
+
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="area_total_produccion de produccion" name= "area_total_produccion" ng-model="produccion.area_total_produccion" required>
+                                <div ng-messages="dForm.area_total_produccion.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="area_total_terreno de produccion" name= "area_total_terreno" ng-model="produccion.area_total_terreno" required>
+                                <div ng-messages="dForm.area_total_terreno.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+
+                            
+                            </div>
+                            <div layout-gt-sm="row">
+                                
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Produccion</label>
+            <md-select ng-model="produccion.produccion_tipo_choice">
+              <md-option ng-repeat="produccion_tipo_choice in produccion_tipo_choices" value="{{produccion_tipo_choice.abbrev}}">
+                {{produccion_tipo_choice.abbrev}}
+              </md-option>
+            </md-select>
+          </md-input-container>                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <md-input-container class="md-block" flex="45">
+                            <md-checkbox ng-model="producto.cetificacion_organica" aria-label="cetificacion_organica">
+                                cetificacion_organica
+                            </md-checkbox>
+                        </md-input-container> 
+
+
+
+                                </div>
+                                </div>
+
+
+                            <div layout-gt-sm="column" flex="40">
+                                <img class="md-user-avatar" src="media/img/quinua1.jpg" />
+                            
+                             </div>
+                        </div>
+                        
+
+                        
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="produccion.id == null">Crear</span>
+                            <span ng-show="produccion.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

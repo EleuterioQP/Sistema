@@ -1,0 +1,1 @@
+[2016-12-04 06:28:32] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated

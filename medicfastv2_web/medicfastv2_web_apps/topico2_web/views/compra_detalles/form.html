@@ -1,0 +1,94 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="Compra_detalleSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/1211810014.png" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Detalle</span>
+                            <span class="md-subhead">Detalle Compra</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                             <div layout-gt-sm="column" flex="60">
+
+                                <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="autoconsumo de compra_detalle" name= "autoconsumo" ng-model="compra_detalle.autoconsumo" required>
+                                <div ng-messages="dForm.autoconsumo.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="destino de compra_detalle" name= "destino" ng-model="compra_detalle.destino" required>
+                                <div ng-messages="dForm.destino.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+
+
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="lugar_comercializacion de compra_detalle" name= "lugar_comercializacion" ng-model="compra_detalle.lugar_comercializacion" required>
+                                <div ng-messages="dForm.lugar_comercializacion.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="semilla de compra_detalle" name= "semilla" ng-model="compra_detalle.semilla" required>
+                                <div ng-messages="dForm.semilla.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+
+
+                            
+
+
+
+                                </div>
+
+
+                            <div layout-gt-sm="column" flex="30">
+                                <img class="md-user-avatar" src="media/img/deta.png" />
+                            
+                             </div>
+                        </div>
+                        
+
+                        
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="compra_detalle.id == null">Crear</span>
+                            <span ng-show="compra_detalle.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

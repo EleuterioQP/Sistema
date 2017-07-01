@@ -1,0 +1,101 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="AsociacionSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/1211810014.png" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Registro</span>
+                            <span class="md-subhead">Registro Asociaciones</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                             <div layout-gt-sm="column" flex="60">
+
+                                <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="actividad de asociacion" name= "actividad" ng-model="asociacion.actividad" required>
+                                <div ng-messages="dForm.actividad.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="numero_asociados de asociacion" name= "numero_asociados" ng-model="asociacion.numero_asociados" required>
+                                <div ng-messages="dForm.numero_asociados.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+
+
+                            <md-input-container class="md-block">
+                                <label>referencia_bancaria</label>
+                                <input md-maxlength="30" required md-no-asterisk name="referencia bancaria" ng-model="asociacion.referencia_bancaria">
+                                <div ng-messages="projectForm.referencia_bancaria.$error">
+                                <div ng-message="required">This is required.</div>
+                                <div ng-message="md-maxlength">The referencia_bancaria must be less than 30 characters long.</div>
+                                </div>
+                             </md-input-container>
+
+                             <md-input-container class="md-block">
+                                <label>referencias_comerciales</label>
+                                <input md-maxlength="30" required md-no-asterisk name="referencias comerciales" ng-model="asociacion.referencias_comerciales">
+                                <div ng-messages="projectForm.referencias_comerciales.$error">
+                                <div ng-message="required">This is required.</div>
+                                <div ng-message="md-maxlength">The referencias_comerciales must be less than 30 characters long.</div>
+                                </div>
+                             </md-input-container>
+                               
+                               
+                            
+                            
+
+                            
+                           
+
+
+                            
+                                
+                           
+
+                                </div>
+
+
+                            <div layout-gt-sm="column" flex="40">
+                                <img class="md-user-avatar" src="media/img/SinFinesdeLucro2.png" />
+                            
+                             </div>
+                        </div>
+                        
+
+                        
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="asociacion.id == null">Crear</span>
+                            <span ng-show="asociacion.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

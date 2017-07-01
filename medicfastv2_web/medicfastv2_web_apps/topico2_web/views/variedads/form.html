@@ -1,0 +1,109 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="ProductoSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/1211810014.png" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Registro</span>
+                            <span class="md-subhead">Registro Quinua</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                             <div layout-gt-sm="column" flex="60">
+
+                                <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="nombre_cientifico de producto" name= "nombre_cientifico" ng-model="producto.nombre_cientifico" required>
+                                <div ng-messages="dForm.nombre_cientifico.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="disponibilidad de producto" name= "disponibilidad" ng-model="producto.disponibilidad" required>
+                                <div ng-messages="dForm.disponibilidad.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+
+
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="tiempo_vida de producto" name= "tiempo_vida" ng-model="producto.tiempo_vida" required>
+                                <div ng-messages="dForm.tiempo_vida.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="presentaciones de producto" name= "presentaciones" ng-model="producto.presentaciones" required>
+                                <div ng-messages="dForm.presentaciones.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+
+
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="empaque de producto" name= "empaque" ng-model="producto.empaque" required>
+                                <div ng-messages="dForm.empaque.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <md-input-container class="md-block">
+                            <md-checkbox ng-model="producto.suministra" aria-label="Suministra">
+                                suministra
+                            </md-checkbox>
+                        </md-input-container> 
+                            </div>
+
+
+
+                                </div>
+
+
+                            <div layout-gt-sm="column" flex="40">
+                                <img class="md-user-avatar" src="media/img/hqi_3.jpg" />
+                            
+                             </div>
+                        </div>
+                        
+
+                        
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="producto.id == null">Crear</span>
+                            <span ng-show="producto.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

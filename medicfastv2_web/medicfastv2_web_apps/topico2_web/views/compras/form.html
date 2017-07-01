@@ -1,0 +1,98 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="CompraSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/comprass.jpg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Registro</span>
+                            <span class="md-subhead">Registro Compras</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                             <div layout-gt-sm="column" flex="60">
+
+                                <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="nombre de compra" name= "nombre" ng-model="compra.nombre" required>
+                                <div ng-messages="dForm.nombre.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="cantidad de compra" name= "cantidad" ng-model="compra.cantidad" required>
+                                <div ng-messages="dForm.cantidad.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+
+
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" md-no-float flex="45" >
+                              
+                                <input placeholder="total de compra" name= "total" ng-model="compra.total" required>
+                                <div ng-messages="dForm.total.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           
+                              
+                               <md-input-container class="md-block" md-no-float flex="45">
+            <label>Tipo</label>
+            <md-select ng-model="compra.produccion_tipo_choice">
+              <md-option ng-repeat="produccion_tipo_choice in produccion_tipo_choices" value="{{produccion_tipo_choice.abbrev}}">
+                {{produccion_tipo_choice.abbrev}}
+              </md-option>
+            </md-select>
+          </md-input-container> 
+                            
+                            </div>
+
+
+                          
+
+
+
+                                </div>
+
+
+                            <div layout-gt-sm="column" flex="40">
+                                <img class="md-user-avatar" src="media/img/compras.jpg" />
+                            
+                             </div>
+                        </div>
+                        
+
+                        
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="compra.id == null">Crear</span>
+                            <span ng-show="compra.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

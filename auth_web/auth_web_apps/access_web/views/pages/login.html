@@ -1,0 +1,38 @@
+<!-- Login -->
+<div align="center" ng-controllerx="DashboardSaveCtrl">
+    <md-card flex="30">
+    <div class="navbar">
+        <div class="navbar-brand text-center">
+            <div class="md-toolbar-tools">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
+              width: 24px; height: 24px;">
+                    <path d="M 92 80 L 50 0 L 50 100 Z" fill="rgba(139, 195, 74, 0.8)"></path>
+                    <path d="M 8 80 L 50 0 L 50 100 Z" fill="#f3f3f3"></path>
+                </svg>
+                <span class="m-l inline">{{app.name}}</span>
+            </div>
+        </div>
+    </div>
+    <form name="form" method="post">
+        <div class="input-group m-b-20">
+            <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+            <div class="fg-line">
+                    <input type="text" class="md-input" ng-model="user.userName" required placeholder="nombre de usuario">
+                  </div>
+        </div>
+        <div class="input-group m-b-20">
+            <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
+            <div class="fg-line">
+                   <input type="password" class="md-input" ng-model="user.password" required placeholder="Contraseña">
+                 </div>
+        </div>
+        <div class="input-group m-b-20">
+            <md-button ng-click="login()" type="reset" class="md-raised md-primary">
+                <ng-md-icon icon="login"></ng-md-icon>
+                Login
+            </md-button>
+        </div>
+    </form>
+    </md-card>
+</div>
+
